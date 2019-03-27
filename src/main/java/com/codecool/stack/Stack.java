@@ -1,17 +1,40 @@
 package com.codecool.stack;
 
-import com.sun.xml.internal.bind.v2.TODO;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Slf4j
 public class Stack {
 
-    int [] stack;
+    Object[] stack;
+    private int size;
+    private int counter;
 
     public Stack(int num) {
-        stack = new int[num];
+        stack = new Object[num];
+        this.size = num;
     }
 
-    public void addToStack(){
-//        TODO
+    public Object[] getStack() {
+        return stack;
+    }
+
+    public void addToStack(Object newObj) {
+            if (counter == size) {
+                throw new ArrayIndexOutOfBoundsException("Stackoverflow");
+            } else {
+                stack[counter] = newObj;
+                counter++;
+            }
     }
 
     public void removeFromStack(){
