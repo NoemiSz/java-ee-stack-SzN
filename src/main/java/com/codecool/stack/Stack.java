@@ -37,8 +37,16 @@ public class Stack {
             }
     }
 
-    public void removeFromStack(){
-//        TODO
+    public Object removeFromStack(){
+               Object[] newStack = new Object[stack.length];
+               if (counter-1 < 0) {
+                   throw new IndexOutOfBoundsException("No element in the stack!");
+               }else{
+                   Object removed = stack[counter-1];
+                   System.arraycopy(newStack,counter-1,stack,counter-1,newStack.length-1);
+
+               return removed;
+        }
     }
 
     public Object peekLastElement(){
