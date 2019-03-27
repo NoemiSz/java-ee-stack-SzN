@@ -26,6 +26,10 @@ class StackTest {
         stack.addToStack(12);
         assertEquals(12,stack.peekLastElement());
     }
-
+    @Test
+    public void getSizeOfStack(){
+        stack.addToStack("name");
+        assertEquals(1,stack.getSizeOfStack());
+    }
 
 }

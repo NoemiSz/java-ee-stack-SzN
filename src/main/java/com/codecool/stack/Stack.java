@@ -46,7 +46,6 @@ public class Stack {
     }
 
     public int getSizeOfStack(){
-//        TODO
-        return 0;
+        return counter;
     }
 }
