@@ -41,10 +41,10 @@ public class Stack {
 //        TODO
     }
 
-    public int getLastElement(){
-//        TODO
-        return 0;
+    public Object peekLastElement(){
+        return stack[stack.length-1];
     }
+
     public int getSizeOfStack(){
 //        TODO
         return 0;
